@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Bootstrap 5.3/bootstrap.min.css">
+    <script src="./Bootstrap 5.3/bootstrap.min.js"></script>
+</head>
+<body>
+  
+<div class="container">
+    <h2 class="pt-5">Javascript Array Sort</h2>
+
+    <button onclick="myFunction1()" class="btn btn-primary">Alphabetically</button>
+    <button onclick="myFunction2()" class="btn btn-success">Numerically</button>
+
+    <h6  id="demo" class="pt-4"></h6>
+</div>
+
+<script>
+   var points = [40,100,1,5,25,10]
+    document.getElementById("demo").innerHTML = points;
+
+    function myFunction1(){
+        points.sort();
+        document.getElementById("demo").innerHTML = points;
+    }
+    function myFunction2(){
+        points.sort(
+            function(a,b){
+                return(a-b);
+            }
+        );
+        document.getElementById("demo").innerHTML = points[points.length-1];
+    }
+
+</script>
+    
+</body>
+</html>
